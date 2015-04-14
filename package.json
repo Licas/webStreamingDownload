@@ -1,0 +1,29 @@
+{
+  "name": "webStreamingDownload",
+  "version": "0.0.1",
+  "description": "Simple application that allows to download a web stream locally",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Licas/webStreamingDownload.git"
+  },
+  "keywords": [
+    "streaming"
+  ],
+  "author": "Manuel Morini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Licas/webStreamingDownload/issues"
+  },
+  "homepage": "https://github.com/Licas/webStreamingDownload",
+  "dependencies": {
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "querystring": "^0.2.0",
+    "rndm": "^1.1.0",
+    "rtmp-download": "0.0.3"
+  }
+}
