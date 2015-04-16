@@ -22,6 +22,8 @@
   "dependencies": {
     "fs": "0.0.2",
     "http": "0.0.0",
+    "path": "^0.11.14",
+    "phantomjs": "^1.9.16",
     "querystring": "^0.2.0",
     "rndm": "^1.1.0",
     "rtmp-download": "0.0.3"

@@ -6,9 +6,33 @@ var querystring = require('querystring');
 var tmpDir = './tmp';
 
 var rtmp = require('rtmp-download');
+var phantomjs = require('phantomjs');
+
+var path = require('path')
+var childProcess = require('child_process')
+var buffer = require('buffer')
+
+var binPath = phantomjs.path
+ 
+var childArgs = [
+  path.join(__dirname, 'phantomjs-script.js')
+]
 
 
+childProcess.execFile(binPath, childArgs, function(err, stdout, stderr) {
+  // handle results 
+    if(err){
+        console.log("Error occurred:"+err);
+        throw err;
+    }
+    if(stdout)
+    console.log(stdout.toString());
+    
+    if(stderr)
+        console.log(stderr.toString());
+})
 
+/* remove only this
 http.get(
     'http://www.filmpertutti.co/la-foresta-di-ghiaccio-2014/'
     //'http://speedvideo.net/embed-64ned8pp070c-530x302.html'//'www.filmpertutti.co/kung-fu-panda-holiday-la-festivita-di-kung-fu-panda/'
@@ -188,11 +212,11 @@ function downloadFromLink(link) {
                     console.log('File saved!');
             });
 */
-        });
+ /* remove       });
     });
 
 }
-
+till here */
 function getValue(full, from, lastDelimiter) {
     
     var tmp = full.substring(full.indexOf(from)+from.length);
